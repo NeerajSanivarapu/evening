@@ -366,18 +366,381 @@ dictionary
 # print(lst)
 
 
+#patterns
+#--------------------------------
+
+# * * * * *
+# * * * * *
+# * * * * *
+# * * * * *
+# * * * * *
+
+# for i in range(5):   # i ---->> rows
+#     for j in range(5):   # column --->> j
+#         print('*',end=' ')
+#     print()
 
 
+# for i in range(5):
+#     for j in range(5):
+#         print((i,j),end=' ')
+#     print()
+'''
+(0, 0) (0, 1) (0, 2) (0, 3) (0, 4) 
+(1, 0) (1, 1) (1, 2) (1, 3) (1, 4) 
+(2, 0) (2, 1) (2, 2) (2, 3) (2, 4) 
+(3, 0) (3, 1) (3, 2) (3, 3) (3, 4) 
+(4, 0) (4, 1) (4, 2) (4, 3) (4, 4)
+'''
 
 
+'''
+* * * * *
+*       *
+*       *
+*       *
+* * * * *
+'''
+
+# for i in range(5):
+#     for j in range(5):
+#         if i==0 or i==4 or j==0 or j==4:
+#             print('*',end=' ')
+#         else:
+#             print(' ',end=' ')
+#     print()
+
+'''
+    *
+    *
+* * * * *
+    *
+    *
+'''
 
 
+# n=int(input('enter the number:'))
+# for i in range(n):
+#     for j in range(n):
+#         if i==n//2 or j==n//2:
+#             print('*',end=' ')
+#         else:
+#             print(' ',end=' ')
+#     print()
+'''
+*       * 
+  *   *   
+    *     
+  *   *   
+*       * 
+'''
+# n=int(input('enter the number:'))  #5
+# for i in range(n):
+#     for j in range(n):
+#         if i==j or i +j==n-1 :
+#             print('*',end=' ')
+#         else:
+#             print(' ',end=' ')
+#     print()
 
 
+'''
+* * * * * * * * * * * 
+* *               * * 
+*   *           *   * 
+*     *       *     * 
+*       *   *       * 
+*         *         * 
+*       *   *       * 
+*     *       *     * 
+*   *           *   * 
+* *               * * 
+* * * * * * * * * * * 
+'''
+
+# n=int(input('enter the number:'))
+# for i in range(n):
+#     for j in range(n):
+#         if i==0 or j==0 or i==n-1 or j==n-1 or i==j or i+j==n-1 :
+#             print('*',end=' ')
+#         else:
+#             print(' ',end=' ')
+#     print()
+#
+
+'''
+*         
+* *       
+*   *     
+*     *   
+* * * * *
+'''
+# n=5
+# for i in range(n):
+#      for j in range(n):
+#          if i==n-1 or j==0 or i==j:
+#              print('*',end=' ')
+#          else:
+#              print(' ',end=' ')
+#      print()
+
+'''
+        * 
+      * * 
+    *   * 
+  *     * 
+* * * * * 
+'''
+# n=5
+# for i in range(n):
+#      for j in range(n):
+#          if i==n-1 or j==n-1 or i+j==n-1 :
+#              print('*',end=' ')
+#          else:
+#              print(' ',end=' ')
+#      print()
+
+#  Z
+# n=5
+# for i in range(n):
+#      for j in range(n):
+#          if i==0 or i+j==n-1 or i==n-1:
+#              print('*',end=' ')
+#          else:
+#              print(' ',end=' ')
+#      print()
+'''
+* * * * * 
+      *   
+    *     
+  *       
+* * * * *
+'''
+'''
+*      *
+ *   *
+   *
+'''
+# n=5
+# for i in range(n):
+#      for j in range(n):
+#          if (i==j or i+j==n-1) and i<=n//2 :
+#              print('*',end=' ')
+#          else:
+#              print(' ',end=' ')
+#      print()
+
+# n=5
+# for i in range(n):
+#      for j in range(n):
+#          if i+j==n-1 or i==j and i<=n//2 :
+#              print('*',end=' ')
+#          else:
+#              print(' ',end=' ')
+#      print()
+
+'''
+*       * 
+  *   *   
+    *     
+  *       
+*  
+'''
+
+'''
+* * * * *
+*
+*
+*
+* * * * *
+'''
+# n=5
+# for i in range(n):
+#      for j in range(n):
+#          if j==0 or i==0 or i==n-1:
+#              print('*',end=' ')
+#          else:
+#              print(' ',end=' ')
+#      print()
+# '''
+# (0,0)   (0, 1) (0, 2) (0, 3) (0, 4)
+# (1, 0)
+# (2, 0)
+# (3, 0)
+# (4, 0) (4, 1) (4, 2) (4, 3) (4, 4)
+# '''
+
+#i==0 and  j!=0 or j==0
+
+# for i in range(5):
+#     for j in range(5):
+#         if i==0 and j!=0 or j==0 and i!=0 and i!=5-1 or i==5-1 and j!=0:
+#             print('*',end=' ')
+#         else:
+#             print(' ',end=' ')
+#     print()
 
 
+'''
+  * * * * 
+*         
+*         
+*         
+  * * * * 
+'''
+# for i in range(5):
+#     for j in range(5):
+#         if i==0 and j!=0 and j!=4 or j==0 and i!=0 and i!=5-1 or i==5-1 and j!=5-1 and j!=0 or j==5-1 and i!=0 and i!=5-1:
+#             print('*',end=' ')
+#         else:
+#             print(' ',end=' ')
+#     print()
+'''
+  * * *   
+*       * 
+*       * 
+*       * 
+  * * * 
+'''
+
+'''
+*
+* * 
+* * *
+* * * *
+* * * * *
+
+'''
+
+'''
+(0, 0) 
+(1, 0) (1, 1) 
+(2, 0) (2, 1) (2, 2)  
+(3, 0) (3, 1) (3, 2) (3, 3)
+(4, 0) (4, 1) (4, 2) (4, 3) (4, 4)
+'''
+
+# for i in range(5):
+#     for j in range(5):
+#         if i>=j:
+#             print('*',end=' ')
+#         else:
+#             print(' ',end=' ')
+#     print()
+
+'''
+* * * * *
+  * * * *
+    * * *
+      * *
+        *
+'''
+'''
+(0, 0) (0, 1) (0, 2) (0, 3) (0, 4) 
+       (1, 1) (1, 2) (1, 3) (1, 4) 
+              (2, 2) (2, 3) (2, 4) 
+                     (3, 3) (3, 4) 
+                            (4, 4)
+'''
 
 
+# for i in range(5):
+#     for j in range(5):
+#         if i<=j:
+#             print('*',end=' ')
+#         else:
+#             print(' ',end=' ')
+#     print()
+
+#
+# lst=[111,222,333,444,555]
+# i=0
+# dic={}
+# while i<len(lst):
+#     #dic[key]=value
+#     dic[i]=lst[i]
+#     i=i+1
+# print(dic)
+# dic1={}
+# for i in range(len(lst)):
+#     dic1[i]=lst[i]
+# print(dic1)
+
+
+'''
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+'''
+
+
+# for i in range(1,6):
+#     for j in range(1,6):
+#         if i>=j:
+#             print(j,end=' ')
+#         else:
+#             print(' ',end=' ')
+#     print()
+
+
+'''
+1
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
+'''
+# for i in range(1,6):
+#     for j in range(1,6):
+#         if i>=j:
+#             print(i,end=' ')
+#         else:
+#             print(' ',end=' ')
+#     print()
+
+'''
+*
+*  *
+*    *
+*  *     
+*
+
+'''
+# for i in range(5):
+#     for j in range(5):
+#         if j==0 or i==j and i<=2 or i+j==5-1 and i>=2:
+#             print('*',end=' ')
+#         else:
+#             print(' ',end=' ')
+#     print()
+# n=int(input('enter the number'))
+# for i in range(n):
+#     for j in range(n):
+#         if j==0 or i==j or i+j==n-1  or j==n-1:
+#             print('*',end=' ')
+#         else:
+#             print(' ',end=' ')
+#     print()
+
+'''
+*                           * 
+* *                       * * 
+*   *                   *   * 
+*     *               *     * 
+*       *           *       * 
+*         *       *         * 
+*           *   *           * 
+*             *             * 
+*           *   *           * 
+*         *       *         * 
+*       *           *       * 
+*     *               *     * 
+*   *                   *   * 
+* *                       * * 
+*                           * 
+'''
 
 
 
