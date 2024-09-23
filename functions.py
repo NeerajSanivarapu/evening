@@ -9,6 +9,8 @@ def function_name(parameters) :  #function declaration
 function_name(arguments)   # function calling
 '''
 from os import remove
+from sys import exception
+from time import sleep
 
 '''
 waf to add 2 numbers
@@ -476,20 +478,177 @@ r--->> read -->> used to read the data from a file
 w---->> write ---->> used to update the file if file is not not present ceate the file  
 a---->> APPEND---->> used to add the file if the file is not present it will create the file
 '''
-
-
-
-
-
-
-
-print('hi')
+#EXCEPTION HANDLING
+#---------------------------
+'''
+--->> HANDLING THE UNEXPECTED ERRORS WHICH OCCURS DURING EXICUTION 
+#SYNTAX:
 try:
-    a=10
-    print(a[0])
+    statement
 except:
-    print('error is present')
-print('hello')
+    statement
+else:
+    statement
+finally:
+    statement
+'''
+#general exception
+
+# try:
+#     print(10/0)
+# except:
+#     print('error is present')
+# else:
+#     print('no error')
+# finally:
+#     print('i am final ')
+
+#specific exception
+
+# try:
+#     s='hello'
+#     print(s.append(10))
+# except NameError:
+#     print('error')
+
+#generic exception
+
+# try:
+#     s='hello'
+#     print(dict(s))
+# except (AttributeError,NameError,IndexError,ValueError):
+#     print('error')
+
+'''
+user defined exception
+--age error
+# to create user defined exceptions   we will use a keyword called      raise
+'''
+# class AgeError(Exception):
+#     pass
+# age=int(input('enter your age..'))
+# if age>18 :
+#     print('you are eligible ')
+# else:
+#     raise AgeError('you are not eligible...')
+
+
+'''
+generator
+--->> it is used to generate sequence of values 
+---->>> to create a generator we need to use def keyword but insted of return 
+we need to use yield 
+'''
+# def sample(a,b):
+#     yield a+b
+#     yield a-b
+#     yield a*b
+# print(list(sample(4,5)))   #9        -1
+
+
+#wap to return 1 to 100 even numbers
+# def even():
+#     for i in range(1,101):
+#         if i%2==0:
+#             yield i
+# print(list(even()))
+
+
+#wap to return  values which are divisible by 3 and 5 from 15 to 70
+#15  30   45  60
+
+# def sample():
+#     a=int(input('enter the starting number:'))
+#     b=int(input('enter the ending number:'))
+#     for i in range(a,b+1):
+#         if i%3==0 and i %5==0:
+#             yield i
+
+'''
+#----------------------
+scopes in python      |
+#----------------------
+'''
+'''# 1.global scope 
+--->> any variable which is declared inside the class but outside the function
+----->> the scope of this global variable is starting of the class to the end of the class
+'''
+
+
+'''
+# 2.local scope
+--->>> any variable which is declared inside the function 
+---->> the scope of local variable will present only inside the function 
+'''
+# a=10  #20  #global variable
+# print(a)  #10
+# def add():
+#     # global a
+#     a=20   #global  variable
+#     b=20
+#     print(a)   #20
+# add()
+# print(a)  #10
+
+
+
+'''
+decorator
+#-----
+====>> ading some extra features for the existing function without modifying the existing 
+function 
+
+def outer_func(variable):
+    def inner_func(arguments):
+                features to add 
+                variabe(arguments)
+    return inner
+
+'''
+# def outer(func):
+#     def inner(a,b):
+#         print('hey dinga you got the output as ',end=' ')
+#         func(a,b)
+#     return inner
+#
+# @outer
+# def add(a,b):
+#     print(a+b)
+# @outer
+# def sub(a,b):
+#     print(a-b)
+# add(4,5)
+# sub(3,2)
+
+'''
+hey dinga you got the output as 9
+hey dinga you got the output as 1
+'''
+
+#wadf to delay the exicution  of a function
+#sleep(seconds)---->>   module    time
+'''
+from time import sleep
+'''
+# from time import sleep
+# def outer(func):
+#     def inner(a,b):
+#         print('exicution started')
+#         sleep(2)
+#         func(a,b)
+#         sleep(3)
+#     return inner
+# @outer
+# def add(a,b):
+#     print(a+b)
+# add(4,5)
+# @outer
+# def sub(a,b):
+#     print(a-b)
+# sub(4,2)
+
+
+
 
 
 
